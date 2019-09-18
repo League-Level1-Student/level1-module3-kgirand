@@ -11,7 +11,7 @@ int birdXVelocity = 5;
 int gravity = 2;
 int pipeX = 500;
 int pipeY = (int) random(-200,-20);
-int gap = 200;
+int gap = 150;
 int BpipeY;
 
 void draw(){
