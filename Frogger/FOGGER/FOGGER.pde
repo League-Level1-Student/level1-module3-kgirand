@@ -11,6 +11,15 @@ void draw(){
  Car(RXcar, RYcar);
  Car(LXcar, LYcar);
  LXcar ++;
+ println(frogX + " "+frogY + " " + RXcar + " " + RYcar);
+ if(intersects(RXcar,RYcar)){
+  frogX = 400;
+  frogY = 550;
+ }
+ if(intersects(LXcar, LYcar)){
+  frogX = 400;
+  frogY = 550;
+ }
  if(RXcar<=800){
     RXcar +=5;
  }
@@ -62,4 +71,13 @@ void Car(int x, int y){
  fill(#C1041A);
  ellipse(x, y, 100, 50);
  
+}
+boolean intersects(int Xcar, int Ycar) {
+ if ((frogY >= Ycar && frogY <= Ycar+50) &&
+                (frogX > Xcar && frogX < Xcar+100)) {
+   return true;
+  }
+ else  {
+  return false;
+ }
 }
